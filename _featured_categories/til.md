@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Hyde
-slug: hyde
+title: TIL
+slug: til
 menu: true
 order: 2
 description: >
