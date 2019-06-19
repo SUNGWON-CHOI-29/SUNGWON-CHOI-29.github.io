@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 스타트업 활동
+title: 스타트업 개발 업무
 description: >
   ['16.05 ~ '17.03] -
   <a href="https://github.com/SUNGWON-CHOI-29">Android / IOS Native Application</a>
