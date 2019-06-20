@@ -23,7 +23,7 @@ Android / IOS Nativae 앱과 통신하였습니다.
 * 사용자 앱 관련 이미지
 
 ![500x300](https://sungwon-choi-29.github.io/assets/img/blog/onna_user.png)
-![800x600](https://sungwon-choi-29.github.io/assets/img/blog/init.png)
+![500x300](https://sungwon-choi-29.github.io/assets/img/blog/init.png)
 
 * 사업자 앱 관련 이미지
 
@@ -31,4 +31,4 @@ Android / IOS Nativae 앱과 통신하였습니다.
 
 * 페이스 리프트 작업 후 관련 이미지
 
-![800x600](https://sungwon-choi-29.github.io/assets/img/blog/face_lift.png)
+![500x300](https://sungwon-choi-29.github.io/assets/img/blog/face_lift.png)
