@@ -3,7 +3,7 @@ layout: post
 title: 스타트업 개발 업무
 description: >
   ['15.05 ~ '17.03] -
-  <a href="https://github.com/SUNGWON-CHOI-29">Android / IOS Native Application</a>
+  <a href="https://github.com/SUNGWON-CHOI-29/Onna927_beta_1_2">Android / IOS Native Application</a>
 author: author
 
 ---
