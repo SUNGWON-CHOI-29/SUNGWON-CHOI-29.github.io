@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 스타트업 개발 업무
+title: Boostcamp 지원용 간단한 사전과제
 description: >
   ['18.11 ~ '18.12] -
   <a href="https://github.com/SUNGWON-CHOI-29/Pre-assignment">Android Native Application</a>
