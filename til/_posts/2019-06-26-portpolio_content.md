@@ -25,6 +25,8 @@ author: author
 앞으로 하이퍼 레저 패브릭의 네트워크 구성, 장부 갱신과 관련된 예제를 통해
 비공개 블록체인의 기본적인 사항에 대해 공부해 보려고 한다.
 
+<a href="https://hyperledger-fabric.readthedocs.io/en/release-1.1/prereqs.html">하이퍼레저 패브릭 예제 사이트
+
 ## Summary
 
 * 기업에서 활용하기 좋은 비공개 블록체인 기술
