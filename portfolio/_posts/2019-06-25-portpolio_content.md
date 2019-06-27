@@ -16,3 +16,5 @@ Naver Api 사용 및 Data binding, MVVM 모델링을 사용한 것에 의의가 
 
 * RxJava를 이용한 Android App 개발
 * MVVM, Databinding, Naver Api
+
+![800x400](https://sungwon-choi-29.github.io/assets/img/blog/boostcamp.png)
