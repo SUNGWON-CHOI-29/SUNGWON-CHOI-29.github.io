@@ -2,7 +2,7 @@
 layout: post
 title: 비공개 블록체인 - 2
 description: >
-  <a href="https://hyperledger-fabric.readthedocs.io/en/release-1.1/prereqs.html">참고 자료 출처</a>
+  <a href="https://docs.aws.amazon.com/ko_kr/blockchain-templates/latest/developerguide/blockchain-templates-dg.pdf">참고 자료 출처</a>
 author: author
 
 ---
