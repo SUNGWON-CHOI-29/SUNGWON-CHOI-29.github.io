@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Midium - Functinal Programming 번역 및 요약
+title: Medium - Functinal Programming 번역 및 요약
 description: >
   <a href="https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53">원문 링크 - Charles Scalfani</a>
 author: author
 
 ---
 
-Trend 파악을 Midium 기고문 요약 포스팅.
+Trend 파악을 Medium 기고문 요약 포스팅.
 
 ![800x400](https://cdn-images-1.medium.com/max/800/1*cBFSQ9Ytv_D0jwGtpuL5WA.png)
 객체지향 언어의 문제점과 함수형 언어의 필요성
