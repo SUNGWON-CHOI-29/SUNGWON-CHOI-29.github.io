@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Medium - Blockchain 번역 및 요약
+title: Medium - Blockchain
 description: >
   <a href="https://medium.com/@trexhotdog/decrypting-blockchain-aa9572d70542">원문 링크 - John Arsneault</a>
 author: author

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Medium - Functinal Programming 번역 및 요약
+title: Medium - Functional Programming
 description: >
   <a href="https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53">원문 링크 - Charles Scalfani</a>
 author: author

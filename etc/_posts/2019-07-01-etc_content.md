@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Medium - How to think like a Programmer?
+title: Medium - AI(Spotifys)
 description: >
-  <a href="https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53">원문 링크 - Richard Reis</a>
+  <a href="https://medium.com/s/story/spotifys-discover-weekly-how-machine-learning-finds-your-new-music-19a41ab76efe">원문 링크 - Sophia Ciocca</a>
 author: author
 
 ---
 
-Trend 파악을 Medium 기고문 요약 포스팅 - 문제해결에 관한 교훈
+Trend 파악을 Medium 기고문 요약 포스팅 - 스포티파이 개인추천에 대한 설명
 
-![500x400](https://cdn-images-1.medium.com/max/1600/1*HTRqXgr7CVtRBsyTxurQew.jpeg)
+![500x400](https://cdn-images-1.medium.com/max/1600/0*zl0-pZtZzslGC-R8.)
 
 
 당신이 프로그래밍에 관심이 있는 사람이라면 아래의 문구를 본 적이 있을 것이다.
