@@ -202,3 +202,7 @@ paypal:
 download:
   name: Download
   icon: icon-box-add
+onlinejudge:
+  name: Backjoon
+  icon: icon-briefcase
+  prepend: "https://www.acmicpc.net/user/"
