@@ -1,7 +1,7 @@
 ---
 layout: list
-title: TIL
-slug: til
+title: Study
+slug: Study
 menu: true
 order: 2
 description: >

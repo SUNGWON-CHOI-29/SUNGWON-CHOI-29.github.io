@@ -2,8 +2,7 @@
 layout: post
 title: Boostcamp 지원용 간단한 사전과제
 description: >
-  ['18.11 ~ '18.12] -
-  <a href="https://github.com/SUNGWON-CHOI-29/Pre-assignment">Android Native Application</a>
+  ['18.11 ~ '18.12] - Android Native Application</a>
 author: author
 
 ---

@@ -204,5 +204,5 @@ download:
   icon: icon-box-add
 onlinejudge:
   name: Backjoon
-  icon: icon-briefcase
+  icon: icon-library
   prepend: "https://www.acmicpc.net/user/"

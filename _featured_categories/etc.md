@@ -1,7 +1,7 @@
 ---
 layout: list
-title: etc
-slug: etc
+title: Trend
+slug: Trend
 menu: true
 order: 3
 description: >
