@@ -27,5 +27,5 @@ author: author
 * 시연 동영상
 
 <figure>
-  <iframe width="800" height="600" src="https://www.youtube.com/embed/jF0x-ZTjUHM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="500" height="400" src="https://www.youtube.com/embed/jF0x-ZTjUHM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
