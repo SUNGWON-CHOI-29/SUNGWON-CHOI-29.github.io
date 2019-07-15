@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 부스트코스 - Swift&iOS(작성 중)
+title: 부스트코스 - Swift&iOS - 1주차 (작성 중)
 description: >
   커넥트 재단의 스위프트와 iOS 강의, 그리고 현업 선배님들의 리뷰를 통해 배우게 된 것을 정리하기 위한 포스팅 입니다.
 
@@ -10,9 +10,33 @@ author: author
 
 Swift&iOS 강의 1주차 학습 내용 리뷰
 
-* iOS - 뮤직플레이어 만들기(따라히기); 각 종 단축키 및 인터페이스 빌더, IBAction, IBOutlet, Asset 사용법, 오토레이아웃
+## iOS - 뮤직플레이어 만들기(따라히기);
 
-* Swift - 기본 자료형, 구조체, 열거형, 함수, 클로저
+### Xcode 사용 법 및 단축키
+
+### 인터페이스 빌더
+
+### IBAction & IBOutlet
+
+### Asset
+
+### 오토레이아웃
+
+## Swift - 문법
+
+### 기본 자료형
+
+### 구조체
+
+### 열거형
+
+### 함수
+
+### 옵셔널
+
+### 클로저
+
+
 
 ## Summary
 
