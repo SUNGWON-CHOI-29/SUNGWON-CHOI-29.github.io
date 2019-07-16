@@ -10,6 +10,8 @@ author: author
 
 Swift&iOS 강의 1주차 학습 내용 리뷰
 
+![500x400](https://sungwon-choi-29.github.io/assets/blog/img/boostcourse_1.png)
+
 ## iOS - 뮤직플레이어 만들기(따라하기)
 
 ### Xcode 사용 법 및 단축키
