@@ -16,13 +16,25 @@ Swift&iOS 강의 1주차 학습 내용 리뷰
 
 ### Xcode 사용 법 및 단축키
 
+
+
 ### 인터페이스 빌더
+
+
 
 ### IBAction & IBOutlet
 
+
+
 ### Asset
 
+
+
 ### 오토레이아웃
+
+
+
+![500x400](https://sungwon-choi-29.github.io/assets/img/blog/boostcourseresult_1.png)
 
 ## Swift - 문법
 
@@ -37,7 +49,6 @@ Swift&iOS 강의 1주차 학습 내용 리뷰
 ### 옵셔널
 
 ### 클로저
-
 
 
 ## Summary
