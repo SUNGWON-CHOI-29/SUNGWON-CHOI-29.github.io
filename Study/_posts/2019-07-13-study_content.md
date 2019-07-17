@@ -44,7 +44,7 @@ IBAction은 객체에서 발생하는 액션을 코드로 연결하는 것으로
 
 코드로 오토레이아웃을 작성하는 것은 좀 더 세밀하게 할 수 있으나 객체 간의 위치와 크기를 지정하는데 시간이 걸렸고 인터페이스 빌더는 빠르게 할 수 있으나 세밀하게 컨트롤 하기는 조금 부족했습니다.
 
-![500x400](https://sungwon-choi-29.github.io/assets/img/blog/boostcourseresult_1.png)
+![500x400](https://sungwon-choi-29.github.io/assets/img/blog/boostcourse_result_1.png)
 
 ## Swift - 문법
 
