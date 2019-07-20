@@ -49,17 +49,188 @@ IBAction은 객체에서 발생하는 액션을 코드로 연결하는 것으로
 ## Swift - 문법
 
 ### 기본 자료형
+스위프트의 기본 자료형에서는 기타 다른 언어와 크게 차이점은 없었습니다. 다만 다른 자료형의 경후 암시적연 형변환을 통해 오류가 발생하는 것을 막고자 타입이 다른 변수간의 값 교환이 컴파일러 수준에서 오류를 뱉어 줍니다. 그리고 let은 상수 지정 키워드로서 값이 한번 할당되면 변하지 않는 것에 대해서 사용되는 것으로 let으로 값을 지정한 변수에 다시 값을 지정하면 오류가 발생합니다. var는 변수를 지정하는 키워드로 반대로 값을 할당하지 않으면 오류가 발생합니다. var와 let으로 상수,변수를 구분짓게 한 것은 사용자가 유발할 수 있는 오류를 줄이려는 시도로 느껴졌습니다.
 
 ### 구조체
+구조체는 사소한 문법의 차이 말고는 타 언어와 유사했습니다.
+```
+// 학생 구조체 사용 예
+struct Student {
+	// 가변 프로퍼티
+    var name: String = "unknown"
+
+    // 키워드도 `로 묶어주면 이름으로 사용할 수 있습니다
+    var `class`: String = "Swift"
+
+    // 타입 메서드
+    static func selfIntroduce() {
+        print("학생타입입니다")
+    }
+
+    // 인스턴스 메서드
+    // self는 인스턴스 자신을 지칭하며, 몇몇 경우를 제외하고 사용은 선택사항입니다
+    func selfIntroduce() {
+        print("저는 \(self.class)반 \(name)입니다")
+    }
+}
+
+// 타입 메서드 사용
+Student.selfIntroduce() // 학생타입입니다
+
+// 가변 인스턴스 생성
+var yagom: Student = Student()
+yagom.name = "yagom"
+yagom.class = "스위프트"
+yagom.selfIntroduce()   // 저는 스위프트반 yagom입니다
+
+// 불변 인스턴스 생성
+let jina: Student = Student()
+
+// 불변 인스턴스이므로 프로퍼티 값 변경 불가
+// 컴파일 오류 발생
+//jina.name = "jina"
+jina.selfIntroduce() // 저는 Swift반 unknown입니다
+```
 
 ### 열거형
+스위프트에서 열거형은 매우 강력합니다. C언어는 열거형이 숫자로 변환되어 처리되는 반면 스위프트에서는 열거형에 사용한 타입 그 자체를 사용할 수 있습니다. 또한 메소드를 추가 할 수 있는 점이 독특했습니다. 그리고 스위치 구문에서 매우 효과적으로 사용할 수 있습니다.
+```
+//열거형 메소드 사용 예
+enum Month {
+    case dec, jan, feb
+    case mar, apr, may
+    case jun, jul, aug
+    case sep, oct, nov
+
+    func printMessage() {
+        switch self {
+        case .mar, .apr, .may:
+            print("따스한 봄~")
+        case .jun, .jul, .aug:
+            print("여름 더워요~")
+        case .sep, .oct, .nov:
+            print("가을은 독서의 계절!")
+        case .dec, .jan, .feb:
+            print("추운 겨울입니다")
+        }
+    }
+}
+
+Month.mar.printMessage()
+```
 
 ### 함수
+스위프트는 함수형 언어를 지원하는 다중 패러다임 언어이기 때문에 함수를 일급객체로 취급할 수 있습니다. 그래서 함수를 변수, 상수에 할당할 수 있으며 매개변수를 통해 전달할 수도 있습니다. 그리고 리턴값일 경우 return 생략 등 컴파일러가 인식할 수 있는 범위에 한해 사용자 편의적인 문법이 많이 있다는 것을 알 수 있었습니다.
+
+```
+//함수 타입 예
+var someFunction: (String, String) -> Void = greeting(to:from:)
+someFunction("eric", "yagom") // Hello eric! I'm yagom
+
+someFunction = greeting(friend:me:)
+someFunction("eric", "yagom") // Hello eric! I'm yagom
+
+
+// 타입이 다른 함수는 할당할 수 없습니다 - 컴파일 오류 발생
+//someFunction = sayHelloToFriends(me: friends:)
+
+
+func runAnother(function: (String, String) -> Void) {
+    function("jenny", "mike")
+}
+
+// Hello jenny! I'm mike
+runAnother(function: greeting(friend:me:))
+
+// Hello jenny! I'm mike
+runAnother(function: someFunction)
+```
 
 ### 옵셔널
+옵셔널은 스위프트에서 처음 알게된 개념으로 변수의 값이 있을 수도 있고 없을 수도 있는 것을 고려해 사용하는 것입니다. 옵셔널로 선언된 변수는 if-let 구문을 통해 값을 꺼내올 수 있게되며 이 과정에서 해당 변수에 값이 있는지 여부에 따라 다른 처리를 할 수 있습니다. 이 옵셔널로 인해 NULL인지 확인해야 하는 변수의 경우 그 처리과정을 매우 손쉽고 깔끔하게 해결할 수 있습니다.
+
+```
+//옵셔널 추출 예
+func printName(_ name: String) {
+    print(name)
+}
+
+var yourName: String! = nil
+
+if let name: String = yourName {
+    printName(name)
+} else {
+    print("yourName == nil")
+}
+```
 
 ### 클로저
+클로저 또한 스위프트에서 처음 접한 개념으로 <b>실행가능한 코드 블럭</b>을 의미합니다. 클로저 기준에 따르면 함수는 이름이 있는 클로저 입니다. 이 클로저는 함수처럼 매개변수 전달과 반환 값을 사용할 수 있으며 함수의 전달인자로써도 많이 쓰입니다.
+```
+//함수의 전달인자로서 클로저
 
+let add: (Int, Int) -> Int
+add = { (a: Int, b: Int) in
+    return a + b
+}
+
+let substract: (Int, Int) -> Int
+substract = { (a: Int, b: Int) in
+    return a - b
+}
+
+let divide: (Int, Int) -> Int
+divide = { (a: Int, b: Int) in
+    return a / b
+}
+
+func calculate(a: Int, b: Int, method: (Int, Int) -> Int) -> Int {
+    return method(a, b)
+}
+
+var calculated: Int
+
+calculated = calculate(a: 50, b: 10, method: add)
+
+print(calculated) // 60
+
+calculated = calculate(a: 50, b: 10, method: substract)
+
+print(calculated) // 40
+
+calculated = calculate(a: 50, b: 10, method: divide)
+
+print(calculated) // 5
+
+//따로 클로저를 상수/변수에 넣어 전달하지 않고,
+//함수를 호출할 때 클로저를 작성하여 전달할 수도 있습니다.
+
+calculated = calculate(a: 50, b: 10, method: { (left: Int, right: Int) -> Int in
+    return left * right
+})
+
+print(calculated) // 500
+```
+
+또한 클로저는 다음과 같은 규칙을 통해 축약될 수 있습니다.
+1. 후행 클로저 : 함수의 매개변수로 전달되는 경우 함수 밖에 구현 가능
+1. 반환 타입 생략 : 컴파일러가 클로저의 타입을 유추할 수 있는 경우 매개변수, 반환 타입 생략 가능
+1. 단축 인자 이름 : 컴파일러가 타입을 유추할 수 있는 경우 전달인자를 $0,$1로 대체 가능
+1. 암시적 반환 : 반환 값이 있는 경우 마지막 행은 반환 값으로 간주되어 return 이 필요없습니다.
+
+```
+//축약 전
+result = calculate(a: 10, b: 10, method: { (left: Int, right: Int) -> Int in
+    return left + right
+})
+
+//축약 후
+result = calculate(a: 10, b: 10) { $0 + $1 }
+
+print(result) // 20
+```
+
+<b>지나친 축약은 가독성을 떨어트리므로 주의해야 합니다.</b>
 
 ## Summary
 
