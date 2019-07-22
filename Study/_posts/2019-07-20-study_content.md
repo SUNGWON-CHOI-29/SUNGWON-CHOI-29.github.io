@@ -10,6 +10,4 @@ author: author
 
 Swift&iOS 강의 2주차 학습 내용 리뷰
 
-![500x400](https://sungwon-choi-29.github.io/assets/img/blog/boostcourse_1.png)
-
- 
+![500x400](https://sungwon-choi-29.github.io/assets/img/blog/boostcourse_2.png)
