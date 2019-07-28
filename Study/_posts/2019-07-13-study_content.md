@@ -3,7 +3,6 @@ layout: post
 title: 부스트코스 - Swift&iOS - 1주차
 description: >
   커넥트 재단의 스위프트와 iOS 강의, 그리고 현업 선배님들의 리뷰를 통해 배우게 된 것을 정리하기 위한 포스팅 입니다.
-
 author: author
 
 ---
