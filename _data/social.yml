@@ -205,4 +205,4 @@ download:
 onlinejudge:
   name: Backjoon
   icon: icon-library
-  prepend: "https://www.acmicpc.net/user/"
+  prepend: "https://www.acmicpc.net/"
