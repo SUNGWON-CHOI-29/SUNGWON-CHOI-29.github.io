@@ -79,7 +79,11 @@ override func viewWillAppear(_ animated: Bool) {
 * 리뷰어 선배님의 조언 내용과 오토레이아웃을 수정하여 다시 리뷰를 받은 결과
 ![500x400](https://sungwon-choi-29.github.io/assets/img/blog/boostcourseResult2_2.png)
 
+* 가로모드에서 테스트 하지 않아 또 다시 Fail을 받음, 세 번째 리뷰 진행 중.
+![500x400](https://sungwon-choi-29.github.io/assets/img/blog/boostcourseResult2_3.png)
+
 ## Summary
 * User Interaction을 처리하는 2가지 디자인 패턴(Target-Action, Deligation)과 싱글톤 디자인 패턴에 대한 이해
 * 화면 이동 및 각종 기능 구현 시 H.I.G를 준수하여 UX를 고려하는 개발을 지향해야 한다는 것을 알게 됨
 * 뷰의 이동과 뷰의 상태변화에 따른 메소드 호출을 통해 다수의 뷰를 관리할 수 있게 됨
+* 오토레이아웃 관련 테스트를 진행할 때 <b>다양한 크기의 기기와 가로모드를 꼭 테스트<b> 해야한 다는 것을 알게 됨
