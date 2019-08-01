@@ -82,6 +82,9 @@ override func viewWillAppear(_ animated: Bool) {
 * 가로모드에서 테스트 하지 않아 또 다시 Fail을 받음, 세 번째 리뷰 진행 중.
 ![500x400](https://sungwon-choi-29.github.io/assets/img/blog/boostcourseResult2_3.png)
 
+* 최종 리뷰 결과
+![500x400](https://sungwon-choi-29.github.io/assets/img/blog/boostcourseResult2_4.png)
+
 ## Summary
 * User Interaction을 처리하는 2가지 디자인 패턴(Target-Action, Deligation)과 싱글톤 디자인 패턴에 대한 이해
 * 화면 이동 및 각종 기능 구현 시 H.I.G를 준수하여 UX를 고려하는 개발을 지향해야 한다는 것을 알게 됨
