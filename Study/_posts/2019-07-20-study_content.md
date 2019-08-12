@@ -43,36 +43,8 @@ Swift&iOS 강의 2주차 학습 내용 리뷰
 * Gesture Recognizer를 뷰마다 사용하여 텍스트 뷰 외의 탭을 인삭하여 Editing 모드를 종료함
 * 각 UIView의 값들이 변경됨을 감지하는 메소드를 델리게이션 방식으로 재정의 하여 사용자가 모든 값을 입력했는지 확인함
 * 어떤 UIView의 값이 마지막에 입력될 지 알 수 없으므로 모든 UIView 컴포넌트에 대해 값이 변결될 경우 유효성 검사를 하는 checkValidate() 메소드를 호출함
-```
-func checkValidate(){
-    if idTextField.hasText, pwTextField.hasText, checkTextField.hasText , introduceTextView.hasText, isEditImage{
-        print("all data are input")
-        if let password: String = pwTextField.text,
-        let checkpw: String = checkTextField.text{
-            if password.elementsEqual(checkpw){
-                print("password is checked")
-                nextButton.isEnabled = true
-            }else {
-                nextButton.isEnabled = false
-            }
-        }
-    }else {
-        print("some data missing")
-        nextButton.isEnabled = false
-    }
-}
-```
 * 세 번째 뷰에서 취소를 누를 경우 싱글톤으로 관리되는 유저 정보를 지워야 했는데 버튼을 눌렀을 때 유저 정보를 지우는 것은 처리가 되지 않았음, <b>첫 번째 뷰의 viewDidLoad()에서 유저 정보를 가져왔는데 이 메소드가 유저 정보를 지우기 전에 먼저 호출되었기 때문이었음<b>
 * 따라서 첫 번째 뷰에서 유저 정보를 가져오는 작업을 viewWillAppear()에서 처리하는 것으로 위의 문제를 해결함.
-```
-override func viewWillAppear(_ animated: Bool) {
-    if let userId: String = UserInformation.shared.id{
-        userIdText.text = userId
-    }else{
-        userIdText.text = nil
-    }
-}
-```
 * 오토레이아웃의 제약사항을 꼼꼼히 설정하지 않아 첫 번째, 세 번째 뷰에서 일부 UI요소가 화면에 보이지 않음, <b>다양한 시뮬레이터를 통해 확인을 하지 않은 결과</b>이며 리뷰 실패를 함
 ![500x400](https://sungwon-choi-29.github.io/assets/img/blog/boostcourseResult2_1.png)
 

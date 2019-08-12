@@ -73,44 +73,9 @@ tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPat
 과제를 수행하는데 있어서 코드 리팩토링을 고려한 두가지 사항입니다.
 ### 1. 구조체의 타입 메소드와 프로퍼티 활용
 Json 디코딩이 필요한 뷰 컨트롤러에서 중복되는 코드를 줄이기 위해 Json 디코딩 정보를 가질 콜렉션 변수들을 타입 프로퍼티로 가지는 구조체를 선언했습니다. 데이터 로드 부분을 해당 구조체의 타입 메소드로 구현했습니다.
-
-```
-struct JsonDecoder {
-    static var nations: [Nation] = []
-    static var cities: [City] = []
-
-    static func nationCount() -> Int {
-        return nations.count
-    }
-    static func cityCount() -> Int {
-        return cities.count
-    }
-
-    static func loadData(assetName: String, type: String, tableView: UITableView) {
-        let jsonDecoder: JSONDecoder = JSONDecoder()
-        guard let dataAsset: NSDataAsset = NSDataAsset(name: assetName) else{
-            return
-        }
-        do {
-            if type == "City" {
-                self.cities = try jsonDecoder.decode([City].self, from: dataAsset.data)
-            } else {
-                self.nations = try jsonDecoder.decode([Nation].self, from: dataAsset.data)
-            }
-        } catch {
-            print(error.localizedDescription)
-        }
-        tableView.reloadData()
-    }
-}
-```
 ### 2. 커스텀 셀을 생성할 때 as! 처리
 커스텀 셀을 생성할 때 as 캐스팅이 실패하면 기본적인 테이블 뷰의 셀을 리턴하도록 하였습니다.
-```
-guard let cell: CityTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath) as? CityTableViewCell else {
-            return tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath)
-        }
-```
+
 ## 리뷰 결과
 <center>
 <img src="https://sungwon-choi-29.github.io/assets/img/blog/boostcourseResult3_1.png"/>
