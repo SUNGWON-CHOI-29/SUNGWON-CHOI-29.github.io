@@ -66,11 +66,10 @@ alpha 값 처리, 네비게이션 바 및 툴바 처리는 잘못된 메소드 �
 
 해당 오류들은 올바른 프로퍼티인 self.navigationController?.isNavigationBarHidden, self.navigationController?.isToolbarHidden 를 사용함으로써 처리했습니다.
 
-iOS 리뷰 점검기간으로 리뷰결과를 기다리는 중입니다.
 <center>
 <img src="https://sungwon-choi-29.github.io/assets/img/blog/boostcourseResult4_3.png"/>
 </center>
-
+iOS 리뷰 점검기간으로 리뷰결과를 기다리는 중입니다.
 
 ## Summary
 * 컬렉션 뷰, 스크롤 뷰, 네비게이션 아이템 등 UIView에 관련된 요소 학습
