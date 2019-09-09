@@ -55,10 +55,22 @@ PHPhotoLibrary 프레임워크에 대해서는 강의를 통해 막연히 개념
 강의에서 과제에 필요한 전체적인 기능을 모두 배우는 것 보다는 오히려 기본적인 사항을 배우고 과제를 통해 추가적인 기능들을 Apple Developer 문서를 통해 직접 찾아보며 학습하는 것도 색다른 재미였습니다. 기능 구현에 테스트할 요소가 많았기 때문에 예외처리할 것이 많았고 그만큼 기능을 많이 상세히 알게되었고 재미있는 과제였습니다.
 
 ## 리뷰 결과
+<center>
+<img src="https://sungwon-choi-29.github.io/assets/img/blog/boostcourseResult4_2.png"/>
+</center>
+Operation Queue를 처리하는 과정에서 컬렉션 뷰의 데이터를 리로드하는 메소드를 오퍼레이션 큐의 백그라운드에서 수행되는 작업이 다 끝내고 호출해야 하는데 그렇지 않은 부분이 일부 있었습니다. 일부 뷰에서 ReloadData를 잘못호출 한 부분을 수정했습니다.
+
+alpha 값 처리, 네비게이션 바 및 툴바 처리는 잘못된 메소드 사용으로 인해 Fail 처리 되었습니다. 기존 Cell 자체의 알파값을 수정하는 것에서 Cell내의 imageView의 알파값을 수정함으로써 화면 전환이 일어나도 뷰의 투명도가 유지되도록 하였습니다.
+
+네비게이션 바와 툴바의 경우 네비게이션 컨트롤러의 프로퍼티에서 isHidden과 관련된 프로퍼티를 처리해야 했지만 네비게이션 바의 프로퍼티와 툴바 자체의 프로퍼티를 처리함으로써 네비게이션 컨트롤러에서 해당 뷰들을 그려준 후 hidden이 되었기 때문에 공간을 차지하는 오류가 있었습니다.
+
+해당 오류들은 올바른 프로퍼티인 self.navigationController?.isNavigationBarHidden, self.navigationController?.isToolbarHidden 를 사용함으로써 처리했습니다.
+
 iOS 리뷰 점검기간으로 리뷰결과를 기다리는 중입니다.
 <center>
-<img src="https://sungwon-choi-29.github.io/assets/img/blog/boostcourseResult4.png"/>
+<img src="https://sungwon-choi-29.github.io/assets/img/blog/boostcourseResult4_3.png"/>
 </center>
+
 
 ## Summary
 * 컬렉션 뷰, 스크롤 뷰, 네비게이션 아이템 등 UIView에 관련된 요소 학습
