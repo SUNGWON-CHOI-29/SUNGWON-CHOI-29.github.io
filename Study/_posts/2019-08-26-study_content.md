@@ -13,5 +13,19 @@ Swift&iOS 강의 5주차 학습 내용 리뷰
 
 ## 학습목표
 <center>
-<img src=""/>
+<img src="https://sungwon-choi-29.github.io/assets/img/blog/boostcourse_5.png"/>
 </center>
+
+## Alert and ActionSheet
+
+## Tab Bar navigationController
+
+## Networking
+
+## GCD
+
+## Notification center
+
+## 과제 중점 사항
+
+## 리뷰 결과
