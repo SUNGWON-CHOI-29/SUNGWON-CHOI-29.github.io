@@ -29,6 +29,7 @@ react-native, react-native-router-flux, react-native-track-player
 </center>
 ES6은 ECMAScript라는 자바스크립트 표준문법으로 2015년 릴리즈버전입니다. 2019년 ES9가 가장 최신 버전이지만 ES6이 가장 많이 쓰이기 때문에 실질적인 표준에 가깝다고 할 수 있습니다. 자바스크립트 및 React를 처음 접하는만큼 짧은 시간이지만 관련 사이트를 참고하여 ES6의 기본과 특성을 확실하게 배워서 프로젝트를 진행하려고 합니다.
 
+* https://facebook.github.io/react-native/docs/tutorial
 * https://github.com/lukehoban/es6features
 * https://www.w3schools.com/js/js_es6.asp
 
