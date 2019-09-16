@@ -20,6 +20,8 @@ Android / IOS Nativae 앱과 통신하였습니다.
 
 
 ## Images
+* <a href="https://sungwon-choi-29.github.io/assets/img/blog/onna_concept.png">컨셉이미지</a>
+
 * 사용자 앱 관련 이미지
 
 ![Full-width image](https://sungwon-choi-29.github.io/assets/img/blog/onna_user.png){:.lead data-width="500" data-height="100"}
@@ -32,6 +34,3 @@ Android / IOS Nativae 앱과 통신하였습니다.
 * 페이스 리프트 작업 후 관련 이미지
 
 ![Full-width image](https://sungwon-choi-29.github.io/assets/img/blog/face_lift.png){:.lead data-width="500" data-height="100"}
-
-* 컨셉 이미지
-![Full-width image](https://sungwon-choi-29.github.io/assets/img/blog/onna_concept.png){:.lead data-width="500" data-height="100"}
