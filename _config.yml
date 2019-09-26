@@ -325,3 +325,6 @@ compress_html:
 
 sass:
   style:               compressed
+
+##Disqus 
+disqus: <disqus https-sungwon-choi-29-github-io>
