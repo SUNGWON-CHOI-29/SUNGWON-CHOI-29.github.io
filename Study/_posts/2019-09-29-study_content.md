@@ -14,32 +14,7 @@ react-native(react), ES6
 ### 사용 라이브러리
 react-native, react-native-router-flux, react-native-track-player
 
-
-## 피드백 학습 내용
-1. <b>react life cycle</b>
-
-
-1. TrackPlayer setup 예외처리
-
-
-1. ArrowFunction binding
-
-
-1. Promise
-
-
-1. async/await
-
-
-1. Functional Component
-
-
-1. isSelected -> isPaused
-
-
-1. 삼항연산자가 boolean 값을 가지는 경우
-
-
-1. 컴포넌트 분리
-
-## 기업프로젝트 후기
+## 추가 학습 및 피드백 적용 대상
+* ReactNative - lifeCycle, 컴포넌트 최적화, Functional Component
+* ES6 - ArrowFunction non-binding, Promise 패턴, async/await
+* 기타 - 컴포넌트 분리, 변수명 조정, README.md 수정
