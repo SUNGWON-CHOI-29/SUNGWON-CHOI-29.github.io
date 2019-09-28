@@ -4,7 +4,7 @@ title: Medium - How to think like a Programmer?
 description: >
   <a href="https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53">원문 링크 - Richard Reis</a>
 author: author
-
+comments: true
 ---
 
 Trend 파악을 Medium 기고문 요약 포스팅 - 문제해결에 관한 교훈

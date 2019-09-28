@@ -4,7 +4,7 @@ title: Boostcamp 지원용 간단한 사전과제
 description: >
   ['18.11 ~ '18.12] - Android Native Application</a>
 author: author
-
+comments: true
 ---
 Boostcamp 지원용으로 만들었던 사전 제출 과제,
 Naver Api 사용 및 Data binding, MVVM 모델링을 사용한 것에 의의가 있습니다.

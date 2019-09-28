@@ -4,7 +4,7 @@ title: Medium - AI(Spotifys)
 description: >
   <a href="https://medium.com/s/story/spotifys-discover-weekly-how-machine-learning-finds-your-new-music-19a41ab76efe">원문 링크 - Sophia Ciocca</a>
 author: author
-
+comments: true
 ---
 
 Trend 파악을 Medium 기고문 요약 포스팅 - 스포티파이 개인추천에 대한 설명

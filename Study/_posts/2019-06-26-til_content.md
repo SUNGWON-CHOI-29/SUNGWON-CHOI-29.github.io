@@ -5,7 +5,7 @@ description: >
   참고 자료 출처 -
   <a href="https://medium.com/decipher-media/%ED%95%98%EC%9D%B4%ED%8D%BC%EB%A0%88%EC%A0%80-%ED%8C%A8%EB%B8%8C%EB%A6%AD-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B5%AC%EC%A1%B0-hyperledger-fabric-network-structure-d7fd9c759983">Jung Sungdong 님</a>
 author: author
-
+comments: true
 ---
 
 ![800x400](https://cdn-images-1.medium.com/max/880/1*seO851h_1kXOC35Pq-rfOA.png)

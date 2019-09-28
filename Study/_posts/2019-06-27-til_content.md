@@ -4,7 +4,7 @@ title: 비공개 블록체인 - 2
 description: >
   <a href="https://docs.aws.amazon.com/ko_kr/blockchain-templates/latest/developerguide/blockchain-templates-dg.pdf">참고 자료 출처</a>
 author: author
-
+comments: true
 ---
 
 하이퍼레저 패브릭 예제를 수행하기 위한 환경설정 작업

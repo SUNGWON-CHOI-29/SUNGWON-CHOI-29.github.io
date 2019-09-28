@@ -4,7 +4,7 @@ title: Medium - Functional Programming
 description: >
   <a href="https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53">원문 링크 - Charles Scalfani</a>
 author: author
-
+comments: true
 ---
 
 Trend 파악을 Medium 기고문 요약 포스팅 - 객체지향 언어의 도태

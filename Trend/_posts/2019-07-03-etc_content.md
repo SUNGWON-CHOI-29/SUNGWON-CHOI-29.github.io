@@ -4,7 +4,7 @@ title: Medium - What exactly is Node.js?
 description: >
   <a href="https://medium.com/free-code-camp/what-exactly-is-node-js-ae36e97449f5">원문 링크 - Priyesh Pastel</a>
 author: author
-
+comments: true
 ---
 
 Trend 파악을 Medium 기고문 요약 포스팅 - Node.js는 정확히 무엇인가!!!

@@ -4,7 +4,7 @@ title: Medium - The Best machine learning research so far(2019)
 description: >
   <a href="https://medium.com/@ODSC/the-best-machine-learning-research-of-2019-so-far-954120947794">원문 링크 - ODSC(Open Data Science)</a>
 author: author
-
+comments: true
 ---
 
 Trend 파악을 Medium 기고문 요약 포스팅 - 머신러닝 연구 동향 파악

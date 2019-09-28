@@ -4,7 +4,7 @@ title: Medium - Block Chain(Facebook&Libra)
 description: >
   <a href="https://medium.com/swlh/why-facebook-is-showing-interest-in-cryptocurrency-blockchain-e706ddf06def">원문 링크 - Reza jafery</a>
 author: author
-
+comments: true
 ---
 
 Trend 파악을 Medium 기고문 요약 포스팅 - 페이스북은 왜 암호화폐를 시작했을까?

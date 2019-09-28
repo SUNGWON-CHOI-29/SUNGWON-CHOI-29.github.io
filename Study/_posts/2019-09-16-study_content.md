@@ -5,7 +5,7 @@ description: >
   [9.16 ~ 9.29]
   부스트코스 에이스 커리어 부스팅 프로그램 중 기업과제 관련 포스팅
 author: author
-
+comments: true
 ---
 \#부스트코스 \#React-Native \#사운드짐
 

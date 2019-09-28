@@ -4,7 +4,7 @@ title: Medium - Blockchain
 description: >
   <a href="https://medium.com/@trexhotdog/decrypting-blockchain-aa9572d70542">원문 링크 - John Arsneault</a>
 author: author
-
+comments: true
 ---
 
 Trend 파악을 Medium 기고문 요약 포스팅.
