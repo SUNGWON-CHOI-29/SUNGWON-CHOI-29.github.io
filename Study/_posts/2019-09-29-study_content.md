@@ -15,7 +15,7 @@ react-native(react), ES6
 react-native, react-native-router-flux, react-native-track-player
 
 
-## 피드벽 학습 내용
+## 피드백 학습 내용
 1. <b>react life cycle</b>
 
 

@@ -21,47 +21,48 @@ react-native, react-native-router-flux, react-native-track-player
 
 ## 피드백 결과
 <a href="https://github.com/connect-boostcamp/careerboost_SOUNDGYM/pull/2">PR 코멘트 Url</a>
-1. <b>react life cycle</b>
+
+1.<b>react life cycle</b>
 <center>
 <img src="https://sungwon-choi-29.github.io/assets/img/blog/soundGym_2.png"/>
 </center>
 
-1. TrackPlayer setup 예외처리
+2.TrackPlayer setup 예외처리
 <center>
 <img src="https://sungwon-choi-29.github.io/assets/img/blog/soundGym_3.png"/>
 </center>
 
-1. ArrowFunction binding
+3.ArrowFunction binding
 <center>
 <img src="https://sungwon-choi-29.github.io/assets/img/blog/soundGym_4.png"/>
 </center>
 
-1. Promise
+4.Promise
 <center>
 <img src="https://sungwon-choi-29.github.io/assets/img/blog/soundGym_5.png"/>
 </center>
 
-1. async/await
+5.async/await
 <center>
 <img src="https://sungwon-choi-29.github.io/assets/img/blog/soundGym_6.png"/>
 </center>
 
-1. Functional Component
+6.Functional Component
 <center>
 <img src="https://sungwon-choi-29.github.io/assets/img/blog/soundGym_7.png"/>
 </center>
 
-1. isSelected -> isPaused
+7.isSelected -> isPaused
 <center>
 <img src="https://sungwon-choi-29.github.io/assets/img/blog/soundGym_8.png"/>
 </center>
 
-1. 삼항연산자가 boolean 값을 가지는 경우
+8.삼항연산자가 boolean 값을 가지는 경우
 <center>
 <img src="https://sungwon-choi-29.github.io/assets/img/blog/soundGym_9.png"/>
 </center>
 
-1. 컴포넌트 분리
+9.컴포넌트 분리
 <center>
 <img src="https://sungwon-choi-29.github.io/assets/img/blog/soundGym_10.png"/>
 </center>
