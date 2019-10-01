@@ -127,7 +127,7 @@ defaults:
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                <disqus_shortname>
+disqus:                <https-sungwon-choi-29-github-io>
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # tinyletter:            <tinyletter_username>
@@ -325,6 +325,3 @@ compress_html:
 
 sass:
   style:               compressed
-
-##Disqus 
-disqus: <disqus https-sungwon-choi-29-github-io>
