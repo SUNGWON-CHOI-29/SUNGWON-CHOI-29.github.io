@@ -598,17 +598,134 @@ foo()
 
 <a href="https://flaviocopes.com/javascript-events/"> JavaScript Events</a>
 ### Introduction
+브라우저 내에서 자바스크립트는 event-driven programming 모델을 사용합니다. 모든 것은 따라오는 이벤트에 의해 시작됩니다. 이벤트란 DOM이 로딩된 것일 수도 있고 비동기 요청이 가져오는 작업을 끝냈거나 사용자가 요소를 클릭하거나 페이지를 스크롤링하거나 키보드를 누른 것입니다.
 ### Event handlers
+여러분은 모든 이벤트에 이벤트 핸들러를 사용해서 응답할 수 있습니다. 이벤트 핸들러는 이벤트가 발생했을 떄 호출되는 함수입니다. 하나의 이벤트에 여러개의 핸들러를 등록할 수 있으며 모든 핸들러들이 해당 이벤트가 발생했을 때 호출될 것입니다. 자바스크립트는 세가지의 이벤트 핸들러 등록방법을 제공합니다.
 ### Inline event handlers
+이 스타일은 제약사항 때문에 요즘에는 잘 쓰으지 않습니다만 예전에는 딱 이 방법으로만 이벤트 핸들러 등록이 가능했습니다.
+```
+a href="site.com" onClick="doSomething();">A link</a>
+```
 ### Dom on-event handlers
+이것은 객체가 하나의 이벤트 핸들러를 가질 때 가장 일반적인 방법이며 추가적인 이벤트 핸들러를 가질 수 없습니다.
+```
+window.onload = () => {
+  window loaded
+}
+//XHR 요청을 처리하는데 가장 일반적인 방식입니다.
+const xhr = new XMLHttpRequest()
+xhr.onreadystatechange = () => {
+  //.. do something
+}
+```
+여러분이 핸들러가 특정 프로퍼티에 할당되었는지 확인하고 싶다면 if('onsomething' in window) {}로 확인할 수 있습니다.
 ### Using addEventListener()
+이 방법이 가장 최신방식입니다. 이 방법은 우리가 필요한만큼 핸들러를 추가할 수 있으며 여러분이 가장 많이 볼 수 있는 방식입니다.
+```
+window.addEventListener('load', () => {
+  //window loaded
+}
+```
+IE8과 그 이하버전은 이것을 지원하지 않기 때문에 attachEvent() API를 사용해야 합니다. 여러분이 오래된 브라우저를 지원해야 할 경우 기억해두세요.
 ### Listening on different elements
+여러분은 window를 이용해서 키보드 사용과 같은 전역이벤트를 가로챌 수 있습니다. 그리고 특정 요소에 마우스 클릭과 같은 이벤트가 발생한 것도 캐치할 수 있습니다. 이것이 addEventListener가 때때로 window에서 호출되고 또 어떤 때는 DOM요소에서 호출되는 이유입니다.
 ### The Event object
+이벤트 핸들러는 이벤트 객체를 첫 매개변수로 입력받습니다.
+```
+const link = document.getElementById('my-link')
+link.addEventListener('click', event => {
+  // link clicked
+  })
+```
+이 객체에는 유용한 프로퍼티와 메소드가 많이 있습니다. 예를 들면
+* target, 이벤트를 발생시킨 DOM 요소,
+* type, 이벤트 타입
+* stopPropagation(), DOM안에 이벤트가 그만 전파되길 원할 때 호출
+다른 프로퍼티들은 이벤트의 종류에 따라 다릅니다. 이벤트가 서로 다른 인터페이스를 가지기 때문이죠.
+* MouseEvent
+* KeyboardEvent
+* DragEvent
+* FetchEvent ...and others
+
+예를들어 키보드이벤트가 발생하면 key프로퍼티를 이용해 어떤 키가 눌려졌는데 확인할 수 있습니다.
+```
+window.addEvenntListener('keydown', event => {
+  //key pressed
+  console.log(event.key)
+  })
+```
+마우스 클릭 이벤트 발생시 어떤 버튼이 눌렸는지 확인할 수 있습니다
+```
+const link = document.getElementById('my-link')
+link.addEventListener('mousedown', event => {
+  //mouse button pressed
+  console.log(event.button) //0 = left, 2 = right
+  })
+```
+
 ### Event bubbling and event capturing
+버블링과 캡쳐링은 이벤트 전달을 위한 두가지 모델입니다. 다음과 같은 DOM 구조가 있다고 가정합시다.
+```
+<div id="container">
+  <button>Click me</button>
+</div>
+```
+여러분은 사용자가 버튼을 클릭한 것을 추적하고 싶어하며 두개의 이벤트 리스너가 있습니다. 하나는 버튼에 있고 하나는 #container에 있습니다. 여러분이 전달을 멈추지 않는 이상 자식 요소에 대한 클릭은 항상 부모에게 전달된다는 것을 기억하세요
+
+이런 이벤트 리스너들은 순서에 따라 호출될 것이고 이 순서는 이벤트 버블링/캡쳐링 모델에 따라 결정되게 됩니다. 버블링의 의미는 이벤트가 발생한 아이템에서 가장 가까운 부모의 트리로 계속 올라간다는 것입니다. 우리의 예제에서 버튼에 있는 핸들러는 #container핸들러 보다 먼저 호출될 것입니다.
+
+캡쳐링은 반대입니다. 바깥의 이벤트 핸들러가 먼저 발생하게 됩니다. 기본적으로 모든 이벤트들은 버블링 모델입니다. 여러분은 addEventListener에 세번째 매개변수를 true로 하면 캡쳐링 모델을 적용할 수 있습니다.
+```
+document.getElementById('container').addEventListener(
+  'click',
+  () => {
+    //window loaded
+  },
+  true
+  )
+```
+캡쳐링 이벤트가 먼저 동작한다는 것을 기억하세요, 그리고 나서 버블링 이벤트가 동작합니다. 순서는 다음과 같은 원칙을 따릅니다. DOM이 window 객체부터 시작해서 모든 요소를 지나가면서 클릭된 아이템을 찾습니다. 이렇게 하면서 이벤트와 연관되어 있는 모든 이벤트 핸들러를 호출합니다(캡쳐링 모델) 만약 target에 도달하면 그다음 윈도우 객체까지 거슬러 올라가며 이벤트 핸들러를 호출합니다(버블링 모델)
 ### Stopping the propagation
+DOM 요소의 이벤트는 멈추기 전까지는 모든 부모 트리에게 전달됩니다.
+```
+<html>
+  <body>
+    <section>
+      <a id="my-link" ...>
+```
+a에서 발생한 이벤트가 section에서 body까지 전달됩니다. 이벤트에 stopPropagation()메소드를 호출해서 전파되는 것을 멈출 수 있으며 보통 이벤트 핸들러 끝에 작성합니다.
+```
+const link = document.getElementById('my-link')
+link.addEventListener('mousedown', event => {
+  // process the event
+  // ...
+
+  event.stopPropagation()
+  })
+```
 ### Popular events
+다음은 여러분이 가장 자주 처리하는 이벤트들입니다.
 #### Load
+load는 window와 body 요소에서 발생하며 페이지 로딩이 끝났을 때입니다.
 #### Mouse events
+click은 마우스 버튼이 클릭되었을 때 발생합니다. dblclick은 마우스가 두번 클릭되었을 때 입니다. 물론 이 경우에도 click이 dblclick전에 호출됩니다. mousedown, mousemove, mouseupdms 드래그앤드롭 이벤트를 추적하기 위해 조합되어 사용됩니다. mousemove를 사용할 땐 주의하셔야 하는데 마우스가 움직일 때마다 호출되기 때문입니다.
 #### Keyboard events
+keydown은 키보드 버튼이 눌렸을 때 호출되며 키보드 버튼이 눌러져 있으면 계속 호출됩니다. keyup은 키보드 버튼이 떼어졌을 때 호출됩니다.
 #### Scroll
+scroll이벤트는 window에서 발생하며 페이지를 스크롤할 때마다 호출됩니다. 이벤트 핸들러 내부에서 window.scrolly를 이용해 현재 스크롤 위치를 확인할 수 있습니다. 이 이벤트는 일회성이 아니라는 것을 기억하세요. 스크롤링 시작과 끝말고도 스크롤링 중간에 많은 이벤트가 발생하기 때문에 핸들러 내부에서 많은 연산이나 조작을 하지 않아야 합니다. 그럴경우 대신 throttling을 사용하세요.
 #### Throttling
+위에서 잠시 언급한 것처럼 mousemove나 scroll은 이벤트 당 한번만 호출되는 것이 아니라 해당 행동이 지속되는 동안 계속해서 호출됩니다. 이렇게 해야 여러분이 무슨일이 일어나는지 추적할 수 있기 때문이죠. 만약 이벤트 핸들러에서 복잡한 연산을 수행한다면 성능에 영향을 줄 것이고 여러분의 사이트 사용자들은 버벅거리는 것을 경험하게 될겁니다.
+
+<a href="https://lodash.com/docs/4.17.10#throttle">Loadsh</a>와 같은 throttling 라이브러리는 100줄 조금 넘는 코드로 가능한 모든 경우를 처리해줍니다. 이 문제를 해결하기 위한 간단하고 쉬운방법은 setTimout을 사용해서 100ms마다 스크롤 이벤트를 캐치하는 것입니다.
+```
+let cached = null
+window.addEventListener('scroll', event => {
+  if(!cahced) {
+    setTImeout(() => {
+      //원본 이벤트는 cached를 이용해 접근할 수 있습니다.
+      cached = null
+    }, 100)
+  }
+  cached = event
+  })
+```
