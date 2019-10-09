@@ -6,9 +6,8 @@ description: >
 author: author
 comments: true
 ---
-
+Basic of the JavaScript (3)
 ## Asynchronous programming
-
 <a href="https://flaviocopes.com/javascript-callbacks/"> Asynchronous programming and callbacks </a>
 
 ### Asynchroicity in Programming Languages
