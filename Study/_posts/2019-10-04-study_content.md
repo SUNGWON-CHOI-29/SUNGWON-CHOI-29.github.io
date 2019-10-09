@@ -746,7 +746,7 @@ function hello() {
 ```
 이것은 레거시 코드를 동작시킬 때 유용한데 여러분이 테스트할 시간이 없거나 파일 전체에서 strict 모드가 사용가능한지 확신이 없을 때 쓰일 수 있습니다.
 ## What changed in Strict Mode
-### Accidental golbal variables
+### Accidental global variables
 정의되지 않은 변수에 값을 추가하면 자바스크립트는 기본적으로 전역 객체에 해당 변수를 추가합니다.
 ```
 ;(function() {

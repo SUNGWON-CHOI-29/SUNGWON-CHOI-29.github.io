@@ -208,7 +208,7 @@ setTimeout과 setInterval은 Node.js에서 Timers module을 통해 사용할 수
 
 ### Introduction to promises
 프로미스는 일반적으로 언젠가는 변하게 될 값을 대리로 정의합니다. 프로미스는 많은 콜백을 사용하지 않고 비동기 코드와 작업할 수 있는 한가지 방법입니다. 몇 년밖에 되지 않았지만 ES2015에서 표준으로 소개되었고 ES2017에서는 비동기 함수로서 자리매김 했습니다. 어싱크 함수는 프로미스 API를 빌딩블록으로 사용하기 떄문에 여러분들이 프로미스 대신에 어싱크 함수를 사용한다고 해도 프로미스에 대한 기본적인 이해가 필요합니다.
-### How primises work, in brief
+### How promises work, in brief
 한번 프로미스가 호출되면 펜딩 상태에 진입합니다. 이 말은 약속된 작업을 하도록 기다리는 동안 콜러 함수가 실행을 계속한다는 말이며 콜러함수에게 피드백을 전달합니다. 이 때 콜러 함수는 프로미스가 resolved/rejected 상태를 리턴하는 것을 기다리지만 프로미스가 작업을 하는 동안 함수는 계속 실행됩니다.
 
 ### Which JS API use promises?
@@ -366,7 +366,7 @@ Promise.race([promiseOne, promiseTwo]).then(result => {
 ### Introduction
 자바스크립트는 매우 짧은 기간에 콜백에서 프로미스까지 개선되었습니다. 그리고 ES2017 이후로 자바스크립트에서 비동기화는 async/await 문법으로 더욱 간단해 졌습니다. 비동기 함수들은 프로미스와 생성자들의 조합입니다. 기본적으로 프로미스 상위의 추상화 단계입니다. 다시한번 강조드립니다. <b>async/await는 프로미스를 기반으로 합니다. </b>
 ### Why were async/await introduced?
-그들은 프로미스 주변의 bolierplate와 프로미스 체인의 제한(don't break the chain)을 감소시켰습니다. ES2015에서 프로미스는 비동기화 코드의 문제를 해결하기 위해 소개되었습니다. 정말로 그랬지만 2년 후 ES2015와 ES2017로 분리되었을 때 프로미스가 마지막 해결책이 될 수 없다는 게 명백해졌습니다.
+그들은 프로미스 주변의 boilerplate와 프로미스 체인의 제한(don't break the chain)을 감소시켰습니다. ES2015에서 프로미스는 비동기화 코드의 문제를 해결하기 위해 소개되었습니다. 정말로 그랬지만 2년 후 ES2015와 ES2017로 분리되었을 때 프로미스가 마지막 해결책이 될 수 없다는 게 명백해졌습니다.
 
 프로미스는 유명한 콜백 지옥 문제를 해결하기 위해 소개되었지만 그들 스스로의 복잡성과 문법 복잡도가 있었습니다. 개발자들에게 더욱 좋은 문법으로 알려질 수 있는 좋은 기본형이었고 그래서 결국 우리는 비동기 함수를 갖게 되었습니다.
 
@@ -441,6 +441,7 @@ const getFirstUserData = () => {
 getFirstUserData()
 ```
 그리고 아래는 await/async를 사용하여 같은 기능을 구현했습니다.
+```
 const getFirstUserData = async () => {
   const response = await fetch('/users.json') //get users list
   const users = await response.json // parse JSON
@@ -449,6 +450,8 @@ const getFirstUserData = async () => {
   return userData
 }
 getFirstUserData()
+```
+
 ### Multiple async functions in series
 비동기 함수들은 매우 쉽게 연결될 수 있고 일반 프로미스보다 훨씬 읽기 쉬운 문법입니다.
 ```
