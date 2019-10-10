@@ -20,7 +20,7 @@ const myFunction = () => {
   //..
 }
 ```
-함수 내부의 구문ㅇ이 한줄이라면 중괄호를 없애고 모든 것을 한줄에 작성할 수 있습니다.
+함수 내부의 구문이 한줄이라면 중괄호를 없애고 모든 것을 한줄에 작성할 수 있습니다.
 ```
 const myFunction = () => doSomething()
 ```
@@ -32,7 +32,7 @@ const myFunction = (param1, param2) => doSomething(param1, param2)
 ```
 const myFunction = param => doSomething(param)
 ```
-이 짧은 문법 덕분에 화솔표 함수는 작은 함수의 사용을 장려합니다.
+이 짧은 문법 덕분에 화살표 함수는 작은 함수의 사용을 장려합니다.
 ## Implicit return
 화살표 함수는 암시적인 리턴을 허용합니다. return 키워드가 없어도 값이 리턴됩니다. 이것은 함수 내에 구문이 오직 한줄일 때 동작합니다.
 ```
@@ -724,7 +724,9 @@ const c = a + b
 * 괄호로 라인을 시작하지마세요, 이전 라인의 함수 호출형태로 연결될 수 있거나 배열의 요소로 조회될 수 있습니다.
 
 그리고 궁극적으로 항상 코드를 테스트 하는 것이 여러분의 의도대로 코드가 동작하는지 확실할 수 있게 해줄 것입니다.
-<a href="https://flaviocopes.com/javascript-strict-mode/">Strict Mode</a
+
+<a href="https://flaviocopes.com/javascript-strict-mode/">Strict Mode</a>
+
 Strict 모드는 ES5의 피처로 자바스크립트가 더욱 나은 방식으로 동작하게 만듭니다. 그리고 또한 다른 방식으로 동작하게 만드는데 Strict Mode를 사용하게 되면 자바스크립트 언어의 문법이 바뀌게 됩니다. 가장 중요한 것은 자바스크립트 코드의 strict 모드와 일반 모드(sloppy mode)의 주요 차이점을 아는 것입니다. Strict 모드는 대개 ES3에서 가능했던 함수들과 ES5이후로 deprecated된 함수를 제거합니다
 ## How to enable Strict Mode
 strict 모드는 선택사항 입니다. 모든 자바스크립트의 주요 변경사항을 언어의 기본 동작으로 바꿀 수 없습니다. 왜냐하면 매우 많은 자바스크립트가 동작하지 않을 것이고 1996년의 자바스크립트 코드가 여전히 동작하도록 많은 노력을 기울이기 때문입니다. 또한 그것이 자바스크립트의 성공의 요인이기도 했구요. 그래서 'use strict'문구를 사용해야 strict 모드를 사용할 수 있습니다. 파일의 시작에 추가할 수 있으며 해당 파일에 있는 모든 코드에 적용됩니다.
