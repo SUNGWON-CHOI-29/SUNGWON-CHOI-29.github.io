@@ -134,6 +134,40 @@ Semantic Versioning은 version에 손쉽게 의미를 제공하는데 사용됩�
 * backward에 기능을 추가한 경우 호환성을 위해 마이너 버전으로 취급합니다.
 * 버그를 수정한 경우 패치 버전입니다.
 
-## Uninstalling npm packages locally or globally
+해당 규칙은 모든 프로그래밍 언어에 채택되었고 모든 npm 패키지가 그것을 지키는 것이 중요합니다. 왜냐하면 모든 시스템이 해당 규칙에 의존하기 때문입니다. 왜 이렇게나 중요할까요? 우리가 npm update를 실행할 때 어떤 패키지를 업데이트할 지 선택하는 규칙을 package.json 파일에 설정할 수 있기 때문입니다.
 
+## Uninstalling npm packages locally or globally
+지역적으로 설치된 패키지를 지우기 위해서는 <b>npm uninstall <package-name></b>을 실행하면 됩니다. -S, --save 플래그를 사용해서 package.json 파일에 레퍼런스를 삭제할 수 있습니다.
+
+패키지가 개발 의존성이라면 package.json 파일에 devDependencies에 나열되어 있을 것이고 여러분은 지우기 위해서 -D, --save-dev 플래그를 사용해야 합니다.
+
+패키지가 전역으로 설치되었다면 -g, --global 플래그를 사용해야 합니다. <b>npm uninstall -g <package-name></b>
+
+그리고 해당 명령어는 시스템 어느 경로에서나 사용할 수 있습니다 왜냐하면 현재 작업폴더는 전혀 상관없기 때문입니다.
 ## npm global or local packages
+언제 패키지가 전역으로 설치되는 것이 좋을까요? 로컬과 글로벌 패키지의 차이는 다음과 같습니다.
+* local packages는 <b>npm install <package-name></b>을 통해 현재 디렉토리의 node_modules 폴더 아래에 설치됩니다.
+* global packages는 여러분의 시스템에 특정 지점에 설치되며 여러분이 <b>npm innstall -g <package-name></b>을 수행한 디렉토리와는 상관이 없습니다.
+
+코드에서는 똑같이 require을 사용합니다.
+```
+require('package-name')
+```
+그럼 언제 local/global에 설치를 해야할까요? 일반적으로 모든 패키지들은 지역적으로 설치되어야 합니다. 이것이 여러분의 컴퓨터에 수십개의 응용프로그램이 있어도 각 패키지가 필요에따라 다른버전으로 동작할 수 있게끔합니다.
+
+global 패키지를 업데이트 하는 것은 모든 패키지가 새로운 릴리즈를 사용하게 되며 여러분도 상상하실 수 있겠지만 유지보수 관점에서 아주 끔찍해 질겁니다. 몇몇 패키지들은 앞선 의존성과 호환이 되지 않을 수 있기 때문이죠.
+
+모든 프로젝트는 자원낭비라고 할 지라도 각자의 로컬 버전 패키지를 가지고 있어야 하며 발생할 수 있는 부정적인 결과보다는 그게 낫습니다.
+
+패키지가 globally하게 설치되어야 하는 것은 shell에서 실행가능한 명령어를 제공해서 다른 프로젝트에서 재사용되느 ㄴ경우입니다. npx를 사용해서 실행가능한 명령어도 지역적으로 설치하고 실행할 수 있지만 다른 패키지들은 전역으로 설치하는게 낫습니다. 다음은 여러분이 알고 계실수도 있는 글로벌 패키지로 유명한 것들입니다.
+* npm
+* create-react-app
+* vue-cli
+* grunt-cli
+* mocha
+* react-native-cli
+* gatsby-cli
+* forever
+* nodemon
+
+여러분은 아마 이미 시스템에 몇몇 패키지를 전역으로 설치하셨을 수도 있겠네요. 설치된 전역 패키지들은 <b>npm list -g --depth 0</b>을 통해 확인할 수 있습니다.
