@@ -59,6 +59,7 @@ const id = setTimeout(() => {
   }, 2000)
 clearTimeout(id)
 ```
+
 ### Zero delay
 딜레이를 0으로 지정하게 되면 콜백 함수는 현재 함수가 실행된 뒤 가능한한 빨리 실행됩니다.
 ```
@@ -95,6 +96,7 @@ const interval = setInterval(function() {
   }
   }, 100)
 ```
+
 ### Recursive setTimeout
 setInterval은 함수를 매 n 밀리세컨초마다 실행하며 이것은 함수의 실행이 끝난 것을 고려하지 않습니다. 함수가 매번 같은 시간만큼 실행된다면 문제가 되지 않습니다.
 <center>

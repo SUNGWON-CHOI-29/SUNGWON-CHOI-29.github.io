@@ -27,6 +27,7 @@ ngrok을 사용하려면 그냥 ngrok PORT라고 입력하시면 되고 여러�
 * <a href="https://serverless.com/framework/">Serverless Framework</a>
 * <a href="https://stdlib.com/">Standard Library</a>
 두가지 모두 AWS Lamda에 배포하기 위한 추상 레이어를 제공하며 다른 FAAS 솔루션은 구글 클라우드가 제공하는 Azure에 기반하고 있습니다.
+
 #### PAAS
 PAAS는 stands for Platform As A Service 입니다. 이런 플랫폼들은 응용프로그램을 배포할 때 다른 걱정거리를 모두 없애줍니다.
 #### Zeit Now
