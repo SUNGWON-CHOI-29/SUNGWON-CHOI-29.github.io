@@ -7,3 +7,29 @@ author: author
 comments: true
 ---
 Node.js Study (13)
+
+## The Node.js Event Emitter
+
+## How HTTP requests work
+
+## The HTTP protocol
+
+### Things relate to macOS / Linux
+
+### DNS Lookup phase
+
+### gethostbyname
+
+### TCP request handshaking
+
+### Sending the request
+
+### The request line
+
+### The request header
+
+### The request body
+
+### The response
+
+### Parse the HTML
