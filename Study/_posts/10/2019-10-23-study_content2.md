@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript 및 Node.js 학습 자료 정리
 description: >
-  자바스크립트 및 Node.js에 대해 현재 학습에 활용하고 있는 자료와 내용을 공유해드립니다. 확인해 주시고 추가 학습방향에 대해서 가이드 해주시면 감사하겠습니다.
+  자바스크립트 및 Node.js에 대해 현재 학습에 활용하고 있는 자료와 내용을 공유해드립니다. 학습 정리는 다음과 같이 하고 있습니다. <a href="https://sungwon-choi-29.github.io/study/2019-10-03-study_content/"> 학습내용 정리 방식</a> 확인해 주시고 추가 학습방향에 대해서 가이드 해주시면 감사하겠습니다. 
 author: author
 comments: true
 ---
@@ -32,9 +32,10 @@ JavaScript 및 Node.js 학습 자료 정리
 * The JavaScript Event Loop
 * JavaScript Events
 
+
 ## Node.js 학습자료 <a href="https://medium.com/free-code-camp/the-definitive-node-js-handbook-6912378afc6e">링크</a>
 
-###학습내용 (promises 학습 중)
+### 학습내용 (promises 학습 중)
 * Introduction to Node.js
 * A brief history of Node.js
 * How to install Node.js
