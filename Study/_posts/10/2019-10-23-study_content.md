@@ -163,5 +163,52 @@ path.resolve('/etc', 'flavio.txt')
 ```
 
 ## The Node.js os module
+이 모듈은 여러분이 OS, 프로그램이 돌고 있는 컴퓨터에 대한 정보를 가져오고 상호작용 할 수 있는 많은 함수를 제공합니다.
+```
+const os = require('os')
+```
+파일 처리와 관련된 중요한 것들을 우리에게 알려주는 유용한 프로퍼티들이 있습니다. <b>os.EOL</b>은 개행자를 전달합니다. 리눅스나 맥에서는 \\n이고 윈도우즈에서는 \\r\\n입니다. 제가 리눅스나 맥이라고 말할 때는 POSIX 플랫폼이라는 것입니다. 단순하게 하기위해 노드가 돌아갈 수 있는 덜 유명한 운영체제는 제외했습니다.
+
+os.constants.signals는 프로세스 시그널을 처리할 수 있는 상수를 알려줍니다. SIGHUP, SIGKILL 같은 것들 말이죠.
+
+os.constants.errno는 에러 러포팅에 설정되는 상수들입니다. EADDRINUSE, EOVERFLOW 등이 있습니다. 다음은 os가 제공하는 주요 메소드 들입니다.
+
+* os.arch() - arm, x64와 같은 구조에 대한 식별자를 문자열 형태로 리턴합니다.
+* os.cpus() - 시스템에 CPU 사용 정보를 리턴합니다
+* os.endianness() - Node.js가 Big Edian / Little Edian 중 어느 것으로 컴파일 되었는지 BE/LE로 리턴합니다.
+* os.freemem() - 시스템에 사용가능한 메모리를 바이트단위로 리턴합니다.
+* os.homedir() - 현재 사용자의 홈 디렉토리 경로를 리턴합니다.
+* os.hostname() - 호스트이름을 리턴합니다.
+* os.loadavg() - 운영체제의 load average를 계산해서 리턴합니다. 이 값은 리눅스와 맥에서만 의미있는 값을 리턴합니다.
+* os.networkInterfaces() - 시스템에 사용가능한 네트워크 인터페이스들의 자세한 정보를 리턴합니다.
+* os.platform() - Node.js가 컴파일된 플랫폼을 리턴합니다.
+* os.release() - 운영체제의 릴리즈 넘버 식별자를 문자열 형태로 리턴합니다.
+* os.tmpdir() - temp 폴더에 할당된 경로를 리턴합니다.
+* os.totalmem() - 시스템에 사용가능한 전체 메모리를 바이트 형태로 리턴합니다
+* os.type() - 운영체제의 식별자를 리턴합니다 (Linux, Darwin, Windows_NT 등)
+* os.uptime() - 컴퓨터가 부팅된 이후로 흘러간 시간을 초단위로 리턴합니다.
 
 ## The Node.js events module
+events 모듈은 Node.js에서 이벤트로 작업할 때 핵심이 되는 EventEmitter 클래스를 제공합니다. 다음과 같이 EventEmitter를 사용할 수 있습니다.
+```
+const EventEmitter = require('events')
+const door = new EventEmitter()
+```
+이벤트 리스너는 스스로 이벤트를 삼켜서 아래의 이런 이벤트들을 실행합니다.
+* newListener - 리스너가 추가되었을 떄
+* removeListener - 리스너가 제거되었을 때
+
+다음은 가장 유용한 메소드들의 자세한 내용입니다.
+* emitter.addListener() - emitter.on()의 별칭입니다.
+* emitter.emit() - 이벤트를 뱉어냅니다. 모든 이벤트 리스너들을 등록된 순서대로 동기화되게 호출합니다.
+* emitter.eventNames() - 현재 이벤트 리스너에 등록된 이벤트들을 문자열 형태로 배열에 담아 리턴합니다.
+* emitter.getMaxListeners() - 하나의 이벤트리스너 객체에 최대로 추가할 수 있는 리스너의 수를 가져옵니다. 기본으로 10으로 설정되어 있지만 setMaxListeners()를 이용해서 늘리거나 줄일 수 있습니다.
+* emitter.listenerCount() - 매개변수로 넘겨준 이벤트의 리스너 수를 가져옵니다
+* emitter.listeners() - 매개변수로 넘겨진 이벤트의 리스너들을 배열로 가져옵니다.
+* emitter.off() - Node10에서 추가된 emitter.removeListener()의 별칭입니다.
+* emitter.once() - 이벤트가 등록된 이후 처음으로 뱉어질 때 호출되는 콜백을 추가합니다. 한번 이 콜백이 호출되면 절대 다시 호출되지 않습니다.
+* emitter.prependListener() - on/addListener을 사용해서 리스너를 추가하면 리스너의 큐에 마지막으로 들어가고 마지막으로 호출됩니다. prependListener를 사용해서 추가하면 다른 리스너들보다 먼저 호출됩니다.
+* emitter.prependOnceListener() - once를 사용해서 리스너를 추가하면 리스너 큐에 마지막에 추가되고 마지막에 호출됩니다. prependOnceListener로 추가하면 다른리스너들 보다 먼저 추가되고 호출됩니다.
+* emitter.removeAllListeners() - 특정 이벤트를 대기하고 있는 EventEmitter의 모든 리스너를 삭제합니다.
+* emitter.removeListener() - 특정 리스너를 삭제합니다. 추가할 때 변수에 콜백함 수를 저장해서 나중에 조회할 수 있습니다.
+* emitter.setMaxListeners() - 이벤트 리스너 객체에 추가할 수 있는 리스너의 최대 수를 설정합니다. 10이 기본이지만 늘리거나 줄일 수 있습니다.
