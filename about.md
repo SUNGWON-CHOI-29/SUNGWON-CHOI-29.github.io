@@ -10,7 +10,7 @@ image: /assets/img/blog/hydejack-8.png
 
 SUNGWON CHOI
 
-Looking for Junior SW Engineer position.
+Junior BackEnd Engineer
 
 010-9706-0934
 
