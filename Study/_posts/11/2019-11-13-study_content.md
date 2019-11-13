@@ -41,7 +41,7 @@ npm은 Node Package Manager의 약자로 약 60만개의 패키지가 등록되�
 
 ### 함께보면 좋은 자료
 
-* <a href="">npm 공식 웹 사이트</a>
-* <a href="">npm 명령어 설명서</a>
-* <a href="">패키지 간 비교 사이트</a>
-* <a href="">패키지명에 네임사이트 설정하기</a>
+* <a href="https://npmjs.com">npm 공식 웹 사이트</a>
+* <a href="https://docs.npmjs.com/cli">npm 명령어 설명서</a>
+* <a href="https://npmcompare.com">패키지 간 비교 사이트</a>
+* <a href="https://docs.npmjs.com/misc/scope">패키지명에 네임사이트 설정하기</a>
