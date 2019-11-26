@@ -22,3 +22,6 @@ Node.js 교과서 학습 정리 (8)
 ### 프로젝트 마무리 하기
 
 ### 함께 보면 좋은 자료
+
+
+hahahasora@gmail.com
