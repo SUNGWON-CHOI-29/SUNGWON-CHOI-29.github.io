@@ -8,7 +8,7 @@ SUNGWON:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Junior Backend Engineer, <a href="https://personalmobility.modoo.at/">PUMP</a>
+    Junior Backend Engineer, SSG
 
 
   # This photo will be used in the about section
