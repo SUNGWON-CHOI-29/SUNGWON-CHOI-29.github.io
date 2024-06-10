@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Portfolio
-slug: portfolio
+title: Career
+slug: Career
 menu: true
 order: 1
 description: >
