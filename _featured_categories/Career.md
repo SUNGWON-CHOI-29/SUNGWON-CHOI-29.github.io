@@ -2,7 +2,7 @@
 layout: list
 title: Career
 slug: Career
-menu: true
+menu: false
 order: 1
 description: >
 
